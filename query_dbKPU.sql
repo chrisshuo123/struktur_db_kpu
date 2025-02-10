@@ -59,7 +59,7 @@ CREATE TABLE kecamatan
 select * from kecamatan;
 describe kecamatan;
 
-/* Insert kecamatan (state) linked with Surabaya, Jawa Timur */
+/* Insert Kecamatan (Subdistrict) linked with Surabaya, Jawa Timur */
 INSERT INTO kecamatan(idKecamatan, kecamatan, idKotaKab_fk, idProvinsi_fk)
 VALUES	(1, 'Dukuh Pakis', 1, 1),
 		(2, 'Gayungan', 1, 1),
@@ -95,3 +95,4 @@ VALUES	(1, 'Dukuh Pakis', 1, 1),
         
 SELECT * FROM kecamatan;
 describe kecamatan;
+
