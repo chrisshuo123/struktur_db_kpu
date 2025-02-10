@@ -58,3 +58,40 @@ CREATE TABLE kecamatan
 
 select * from kecamatan;
 describe kecamatan;
+
+/* Insert kecamatan (state) linked with Surabaya, Jawa Timur */
+INSERT INTO kecamatan(idKecamatan, kecamatan, idKotaKab_fk, idProvinsi_fk)
+VALUES	(1, 'Dukuh Pakis', 1, 1),
+		(2, 'Gayungan', 1, 1),
+		(3, 'Jambangan', 1, 1),
+		(4, 'Karang Pilang', 1, 1),
+        (5, 'Sawahan', 1, 1),
+        (6, 'Wiyung', 1, 1),
+        (7, 'Wonocolo', 1, 1),
+        (8, 'Wonokromo', 1, 1),
+        (9, 'Gubeng', 1, 1),
+        (10, 'Gunung Anyar', 1, 1),
+        (11, 'Mulyorejo', 1, 1),
+        (12, 'Rungkut', 1, 1),
+        (13, 'Sukolilo', 1, 1),
+        (14, 'Tambaksari', 1, 1),
+        (15, 'Tenggilis Mejoyo', 1, 1),
+        (16, 'Bubutan', 1, 1),
+        (17, 'Genteng', 1, 1),
+        (18, 'Simokerto', 1, 1),
+        (19, 'Tegalsari', 1, 1),
+        (20, 'Bulak', 1, 1),
+        (21, 'Kenjeran', 1, 1),
+        (22, 'Krembangan', 1, 1),
+        (23, 'Pabean Cantian', 1, 1),
+        (24, 'Semampir', 1, 1),
+        (25, 'Asem Rowo', 1, 1),
+        (26, 'Benowo', 1, 1),
+        (27, 'Lakarsantri', 1, 1),
+        (28, 'Pakal', 1, 1),
+        (29, 'Sambikerep', 1, 1),
+        (30, 'Sukomanunggal', 1, 1),
+        (31, 'Tandes', 1, 1);
+        
+SELECT * FROM kecamatan;
+describe kecamatan;
