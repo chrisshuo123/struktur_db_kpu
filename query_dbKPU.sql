@@ -40,3 +40,21 @@ VALUES(1, 'Surabaya', 1);
 
 SELECT * FROM kotaKabupaten;
 describe kotaKabupaten;
+
+/* *** 3 - TABLE KECAMATAN *** */
+/* Table Kecamatan */
+CREATE TABLE kecamatan
+(
+	idKecamatan INT(4) NOT NULL AUTO_INCREMENT,
+    kecamatan VARCHAR(30) NOT NULL,
+	idKotaKab_fk INT NOT NULL,
+	idProvinsi_fk INT NOT NULL,
+    PRIMARY KEY (idKecamatan),
+    CONSTRAINT fk_kecamatan_kotaKabupaten
+    FOREIGN KEY (idKotaKab_fk) REFERENCES kotaKabupaten(idKotaKab),
+    CONSTRAINT fk_kecamatan_provinsi
+    FOREIGN KEY (idProvinsi_fk) REFERENCES provinsi(idProvinsi)
+) ENGINE = InnoDB;
+
+select * from kecamatan;
+describe kecamatan;
