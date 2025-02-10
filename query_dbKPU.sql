@@ -96,3 +96,20 @@ VALUES	(1, 'Dukuh Pakis', 1, 1),
 SELECT * FROM kecamatan;
 describe kecamatan;
 
+/* *** 4 - TABLE KELURAHAN (Ward Subdistrict) *** */
+/* Table Kelurahan */
+CREATE TABLE kelurahan
+(
+	idKelurahan INT(4) NOT NULL AUTO_INCREMENT,
+    kelurahan VARCHAR(30) NOT NULL,
+    idKecamatan_fk INT NOT NULL,
+    idKotaKab_fk INT NOT NULL,
+    idProvinsi_fk INT NOT NULL,
+    PRIMARY KEY (idKelurahan),
+    CONSTRAINT fk_kelurahan_kecamatan FOREIGN KEY (idKecamatan_fk) REFERENCES kecamatan(idKecamatan),
+    CONSTRAINT fk_kelurahan_kotaKabupaten FOREIGN KEY (idKotaKab_fk) REFERENCES kotaKabupaten(idKotaKab),
+    CONSTRAINT fk_kelurahan_provinsi FOREIGN KEY (idprovinsi_fk) REFERENCES provinsi(idProvinsi)
+) ENGINE = InnoDB;
+
+select * from kelurahan;
+describe kelurahan;
