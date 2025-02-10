@@ -31,3 +31,10 @@ CREATE TABLE kotaKabupaten
 
 select * from kotaKabupaten;
 DESCRIBE kotaKabupaten;
+
+/* Testing a table kotaKabupaten by inserting 1 kotaKabupaten, Surabaya */
+INSERT INTO kotaKabupaten(idKotaKab, kotaKab, idProvinsi_fk)
+VALUES(1, 'Surabaya', 1);
+
+SELECT * FROM kotaKabupaten;
+describe kotaKabupaten;
