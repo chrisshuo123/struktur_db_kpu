@@ -1,6 +1,7 @@
 /* Untuk mengganti schema DB yang digunakan */
 use pendataan_kpu;
 
+/* *** 1 - TABLE WILAYAH *** */
 /* Table Wilayah */
 CREATE TABLE provinsi
 (
@@ -18,6 +19,7 @@ VALUES(1, 'Jawa Timur');
 
 DESCRIBE provinsi;
 
+/* *** 1 - TABLE KOTAKABUPATEN *** */
 /* Table kotaKabupaten */
 CREATE TABLE kotaKabupaten
 (
