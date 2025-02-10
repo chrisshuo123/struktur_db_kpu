@@ -19,7 +19,7 @@ VALUES(1, 'Jawa Timur');
 
 DESCRIBE provinsi;
 
-/* *** 1 - TABLE KOTAKABUPATEN *** */
+/* *** 2 - TABLE KOTAKABUPATEN *** */
 /* Table kotaKabupaten */
 CREATE TABLE kotaKabupaten
 (
