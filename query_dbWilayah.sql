@@ -274,8 +274,16 @@ VALUES	(1, 'Dukuh Kupang', 1, 1, 1),
 SELECT * FROM kelurahan;
 
 /**** INI KHUSUS ISI LEMBAR KPU ****/
-/* 5 - Table LembarFisik */
-/* 6 - Table Tgl Pengesahan */
-/* 7 - Table Pengurus_KPU */
-/* 8 - Table Kegiatan */
-/* 9 - Table Suara */
+/* 1 - Table Suara */
+/* 2 - Table LembarFisik */
+CREATE TABLE LembarFisik
+(
+    idLembarFisik int(10) not null primary key auto_increment,
+    foto_depan mediumblob not null,
+    foto_belakang mediumblob not null,
+    foto_kehadiran mediumblob not null,
+    foto_uangTransport mediumblob not null
+) ENGINE = InnoDB;
+/* 3 - Table Tgl Pengesahan */
+/* 4 - Table Kegiatan */
+/* 5 - Table Pengurus_KPU */
