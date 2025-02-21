@@ -1,8 +1,8 @@
 /* Untuk mengganti schema DB yang digunakan */
 use pendataan_kpu;
 
-/* *** 1 - TABLE WILAYAH *** */
-/* Table Wilayah */
+/* *** 1 - TABLE WILAYAH (PROVINSI) *** */
+/* Table Wilayah (Provinsi) */
 CREATE TABLE provinsi
 (
 	idProvinsi INT(4) NOT NULL AUTO_INCREMENT,
@@ -272,3 +272,4 @@ VALUES	(1, 'Dukuh Kupang', 1, 1, 1),
         (154, 'Tandes', 31, 1, 1);
         
 SELECT * FROM kelurahan;
+
