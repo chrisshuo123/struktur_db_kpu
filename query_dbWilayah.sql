@@ -5,7 +5,7 @@ use pendataan_kpu;
 /* Table Wilayah (Provinsi) */
 CREATE TABLE provinsi
 (
-	idProvinsi INT(4) NOT NULL AUTO_INCREMENT,
+	idProvinsi INT(4) NOT NULL primary key AUTO_INCREMENT,
     provinsi VARCHAR(30) NOT NULL,
     PRIMARY KEY (idProvinsi)
 ) ENGINE = InnoDB;
@@ -23,7 +23,7 @@ DESCRIBE provinsi;
 /* Table kotaKabupaten */
 CREATE TABLE kotaKabupaten
 (
-	idKotaKab INT(4) NOT NULL AUTO_INCREMENT,
+	idKotaKab INT(4) NOT NULL primary key AUTO_INCREMENT,
     kotaKab VARCHAR(30) NOT NULL,
     idProvinsi_fk INT NOT NULL,
     PRIMARY KEY (idKotaKab),
@@ -45,7 +45,7 @@ describe kotaKabupaten;
 /* Table Kecamatan */
 CREATE TABLE kecamatan
 (
-	idKecamatan INT(4) NOT NULL AUTO_INCREMENT,
+	idKecamatan INT(4) NOT NULL primary key AUTO_INCREMENT,
     kecamatan VARCHAR(30) NOT NULL,
 	idKotaKab_fk INT NOT NULL,
 	idProvinsi_fk INT NOT NULL,
@@ -100,7 +100,7 @@ describe kecamatan;
 /* Table Kelurahan */
 CREATE TABLE kelurahan
 (
-	idKelurahan INT(4) NOT NULL AUTO_INCREMENT,
+	idKelurahan INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     kelurahan VARCHAR(30) NOT NULL,
     idKecamatan_fk INT NOT NULL,
     idKotaKab_fk INT NOT NULL,
@@ -274,8 +274,8 @@ VALUES	(1, 'Dukuh Kupang', 1, 1, 1),
 SELECT * FROM kelurahan;
 
 /**** INI KHUSUS ISI LEMBAR KPU ****/
-/* 4 - Table LembarFisik */
-/* 5 - Table Tgl Pengesahan */
-/* 6 - Table Pengurus_KPU */
-/* 7 - Table Kegiatan */
-/* 8 - Table Suara */
+/* 5 - Table LembarFisik */
+/* 6 - Table Tgl Pengesahan */
+/* 7 - Table Pengurus_KPU */
+/* 8 - Table Kegiatan */
+/* 9 - Table Suara */
