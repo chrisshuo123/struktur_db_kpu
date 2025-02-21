@@ -273,3 +273,9 @@ VALUES	(1, 'Dukuh Kupang', 1, 1, 1),
         
 SELECT * FROM kelurahan;
 
+/**** INI KHUSUS ISI LEMBAR KPU ****/
+/* 4 - Table LembarFisik */
+/* 5 - Table Tgl Pengesahan */
+/* 6 - Table Pengurus_KPU */
+/* 7 - Table Kegiatan */
+/* 8 - Table Suara */
