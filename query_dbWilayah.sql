@@ -302,6 +302,14 @@ alter table suara
     references lembarfisik (idLembarFisik);
 
 /* 2 - Table LembarFisik */
+create table lembarfisik (
+    idLembarFisik int(10) primary key not null auto_increment,
+    foto_depan mediumblob not null,
+    foto_belakang mediumblob not null,
+    foto_kehadiran mediumblob not null,
+    foto_uangTransport mediumblob not null
+) ENGINE = InnoDB;
+
 /* 3 - Table Tgl Pengesahan */
 /* 4 - Table Kegiatan */
 /* 5 - Table Pengurus_KPU (tabel anggota) */
