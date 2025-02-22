@@ -305,6 +305,9 @@ alter table suara
     modify idKelurahan_fk int(10) not null,
     modify idTanggalPengesahan_fk int(10) not null;
 
+alter table suara
+    add column nomorTPS int(10) not null after idSuara;
+
 /* 2 - Table LembarFisik */
 create table lembarfisik (
     idLembarFisik int(10) primary key not null auto_increment,
