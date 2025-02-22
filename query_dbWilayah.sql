@@ -1,11 +1,11 @@
 /* Untuk mengganti schema DB yang digunakan */
 use pendataan_kpu;
 
-/* *** 1 - TABLE WILAYAH (PROVINSI) *** */
-/* Table Wilayah (Provinsi) */
+/* *** 1 - TABLE WILAYAH *** */
+/* Table Wilayah */
 CREATE TABLE provinsi
 (
-	idProvinsi INT(4) NOT NULL primary key AUTO_INCREMENT,
+	idProvinsi INT(4) NOT NULL AUTO_INCREMENT,
     provinsi VARCHAR(30) NOT NULL,
     PRIMARY KEY (idProvinsi)
 ) ENGINE = InnoDB;
@@ -23,7 +23,7 @@ DESCRIBE provinsi;
 /* Table kotaKabupaten */
 CREATE TABLE kotaKabupaten
 (
-	idKotaKab INT(4) NOT NULL primary key AUTO_INCREMENT,
+	idKotaKab INT(4) NOT NULL AUTO_INCREMENT,
     kotaKab VARCHAR(30) NOT NULL,
     idProvinsi_fk INT NOT NULL,
     PRIMARY KEY (idKotaKab),
@@ -45,7 +45,7 @@ describe kotaKabupaten;
 /* Table Kecamatan */
 CREATE TABLE kecamatan
 (
-	idKecamatan INT(4) NOT NULL primary key AUTO_INCREMENT,
+	idKecamatan INT(4) NOT NULL AUTO_INCREMENT,
     kecamatan VARCHAR(30) NOT NULL,
 	idKotaKab_fk INT NOT NULL,
 	idProvinsi_fk INT NOT NULL,
@@ -100,7 +100,7 @@ describe kecamatan;
 /* Table Kelurahan */
 CREATE TABLE kelurahan
 (
-	idKelurahan INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	idKelurahan INT(4) NOT NULL AUTO_INCREMENT,
     kelurahan VARCHAR(30) NOT NULL,
     idKecamatan_fk INT NOT NULL,
     idKotaKab_fk INT NOT NULL,
@@ -272,50 +272,3 @@ VALUES	(1, 'Dukuh Kupang', 1, 1, 1),
         (154, 'Tandes', 31, 1, 1);
         
 SELECT * FROM kelurahan;
-
-/**** INI KHUSUS ISI LEMBAR KPU ****/
-/* 1 - Table Suara */
-/*
-idSuara
-idKelurahan_fk
-idTanggalPengesahan_fk
-no_tps
-tot_pemilihAktif
-tot_pemilihBaru
-tot_pemilihTidakMemenuhiSyarat
-tot_perbaikanDataPemilih
-tot_pemilihPotensialNonKTP
-idLembarFisik_fk
-created_at
-*/
-
-/* 2 - Table LembarFisik */
-CREATE TABLE LembarFisik
-(
-    idLembarFisik int(10) not null primary key auto_increment,
-    foto_depan mediumblob not null,
-    foto_belakang mediumblob not null,
-    foto_kehadiran mediumblob not null,
-    foto_uangTransport mediumblob not null
-) ENGINE = InnoDB;
-
-/* 3 - Table Tgl Pengesahan */
-/*
-idTglPengesahan
-tanggal_pengesahan
-*/
-
-/* 4 - Table Kegiatan */
-/*
-idKegiatan,
-idTanggalPengesahan,
-idKelurahan_fk,
-idPengurus_fk
-*/
-
-/* 5 - Table Pengurus_KPU */
-/*
-idAnggota,
-posisi,
-nama_petugas
-*/
