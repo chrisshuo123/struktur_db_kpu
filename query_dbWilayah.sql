@@ -275,6 +275,20 @@ SELECT * FROM kelurahan;
 
 /**** INI KHUSUS ISI LEMBAR KPU ****/
 /* 1 - Table Suara */
+/*
+idSuara
+idKelurahan_fk
+idTanggalPengesahan_fk
+no_tps
+tot_pemilihAktif
+tot_pemilihBaru
+tot_pemilihTidakMemenuhiSyarat
+tot_perbaikanDataPemilih
+tot_pemilihPotensialNonKTP
+idLembarFisik_fk
+created_at
+*/
+
 /* 2 - Table LembarFisik */
 CREATE TABLE LembarFisik
 (
@@ -284,6 +298,24 @@ CREATE TABLE LembarFisik
     foto_kehadiran mediumblob not null,
     foto_uangTransport mediumblob not null
 ) ENGINE = InnoDB;
+
 /* 3 - Table Tgl Pengesahan */
+/*
+idTglPengesahan
+tanggal_pengesahan
+*/
+
 /* 4 - Table Kegiatan */
+/*
+idKegiatan,
+idTanggalPengesahan,
+idKelurahan_fk,
+idPengurus_fk
+*/
+
 /* 5 - Table Pengurus_KPU */
+/*
+idAnggota,
+posisi,
+nama_petugas
+*/
