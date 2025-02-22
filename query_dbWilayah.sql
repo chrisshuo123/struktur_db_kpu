@@ -294,6 +294,12 @@ alter table suara
     add constraint idTanggalPengesahan_fk foreign key (idTanggalPengesahan_fk)
     references tgl_pengesahan (idTanggalPengesahan);
 
+alter table suara
+    rename idLembarFisik to idLembarFisik_fk;
+
+alter table suara
+    add constraint idLembarFisik_fk foreign key (idLembarFisik_fk)
+    references lembarfisik (idLembarFisik);
 
 /* 2 - Table LembarFisik */
 /* 3 - Table Tgl Pengesahan */
