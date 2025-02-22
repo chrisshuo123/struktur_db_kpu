@@ -321,4 +321,11 @@ create table tgl_pengesahan (
 ) ENGINE = InnoDB;
 
 /* 4 - Table Kegiatan */
+create table kegiatan (
+    idKegiatan int(10) primary key not null auto_increment,
+    idTanggalPengesahan_fk int(10) not null,
+    idKelurahan_fk int(10) not null,
+    idPengurus_fk int(10) not null,
+) ENGINE = InnoDB;
+
 /* 5 - Table Pengurus_KPU (tabel anggota) */
