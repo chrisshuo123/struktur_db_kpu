@@ -1,8 +1,8 @@
 /* Untuk mengganti schema DB yang digunakan */
 use pendataan_kpu;
 
-/* *** 1 - TABLE WILAYAH *** */
-/* Table Wilayah */
+/* *** 1 - TABLE WILAYAH (PROVINSI) *** */
+/* Table Wilayah (Provinsi) */
 CREATE TABLE provinsi
 (
 	idProvinsi INT(4) NOT NULL AUTO_INCREMENT,
@@ -272,3 +272,23 @@ VALUES	(1, 'Dukuh Kupang', 1, 1, 1),
         (154, 'Tandes', 31, 1, 1);
         
 SELECT * FROM kelurahan;
+
+/* ***=== INI KHUSUS TABEL DB SUARA KPU ===*** */
+/* 1 - Tabel Suara */
+CREATE TABLE suara (
+    idSuara int(10) primary key not null auto_increment,
+    idKelurahan_fk int(10),
+    idTanggalPengesahan_fk int(10),
+    tot_pemilihAktif int(10),
+    tot_pemilihBaru int(10),
+    tot_pemilihTidakMemenuhiSyarat int(10),
+    tot_perbaikanDataPemilih int(10),
+    tot_pemilihPotensialNonKTP int(10),
+    idLembarFisik int(10) not null,
+    created_at timestamp not null default current_timestamp
+) Engine = InnoDB;
+
+/* 2 - Table LembarFisik */
+/* 3 - Table Tgl Pengesahan */
+/* 4 - Table Kegiatan */
+/* 5 - Table Pengurus_KPU (tabel anggota) */
