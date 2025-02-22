@@ -277,14 +277,14 @@ SELECT * FROM kelurahan;
 /* 1 - Tabel Suara */
 CREATE TABLE suara (
     idSuara int(10) primary key not null auto_increment,
-    idKelurahan_fk int(10),
-    idTanggalPengesahan_fk int(10),
+    idKelurahan_fk int(10), /* Wajib Not Null */
+    idTanggalPengesahan_fk int(10), /* Wajib Not Null */
     tot_pemilihAktif int(10),
     tot_pemilihBaru int(10),
     tot_pemilihTidakMemenuhiSyarat int(10),
     tot_perbaikanDataPemilih int(10),
     tot_pemilihPotensialNonKTP int(10),
-    idLembarFisik int(10) not null,
+    idLembarFisik int(10) not null, /* Wajib Not Null */
     created_at timestamp not null default current_timestamp
 ) Engine = InnoDB;
 
@@ -300,6 +300,10 @@ alter table suara
 alter table suara
     add constraint idLembarFisik_fk foreign key (idLembarFisik_fk)
     references lembarfisik (idLembarFisik);
+
+alter table suara
+    modify idKelurahan_fk int(10) not null,
+    modify idTanggalPengesahan_fk int(10) not null;
 
 /* 2 - Table LembarFisik */
 create table lembarfisik (
