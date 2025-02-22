@@ -328,4 +328,10 @@ create table kegiatan (
     idPengurus_fk int(10) not null,
 ) ENGINE = InnoDB;
 
+alter table kegiatan
+    add constraint idTanggalPengesahan_fk foreign key (idTanggalPengesahan_fk)
+    references tgl_pengesahan (idTanggalPengesahan),
+    add constraint idPengurus_fk foreign key (idPengurus_fk)
+    references pengurus_kpu (idPengurus);
+
 /* 5 - Table Pengurus_KPU (tabel anggota) */
