@@ -288,6 +288,13 @@ CREATE TABLE suara (
     created_at timestamp not null default current_timestamp
 ) Engine = InnoDB;
 
+alter table suara
+    add constraint idKelurahan_fk foreign key (idKelurahan_fk)
+    references kelurahan (idKelurahan),
+    add constraint idTanggalPengesahan_fk foreign key (idTanggalPengesahan_fk)
+    references tgl_pengesahan (idTanggalPengesahan);
+
+
 /* 2 - Table LembarFisik */
 /* 3 - Table Tgl Pengesahan */
 /* 4 - Table Kegiatan */
