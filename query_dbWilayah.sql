@@ -315,5 +315,10 @@ create table lembarfisik (
 ) ENGINE = InnoDB;
 
 /* 3 - Table Tgl Pengesahan */
+create table tgl_pengesahan (
+    idTanggalPengesahan int(10) primary key not null auto_increment,
+    tanggal_pengesahan date not null
+) ENGINE = InnoDB;
+
 /* 4 - Table Kegiatan */
 /* 5 - Table Pengurus_KPU (tabel anggota) */
