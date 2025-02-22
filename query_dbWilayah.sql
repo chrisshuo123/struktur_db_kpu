@@ -335,3 +335,8 @@ alter table kegiatan
     references pengurus_kpu (idPengurus);
 
 /* 5 - Table Pengurus_KPU (tabel anggota) */
+create table pengurus_kpu (
+    idPengurus int(10) primary key not null auto_increment,
+    posisi enum('ketua', 'anggota') not null,
+    nama_petugas varchar(50) not null
+) ENGINE = InnoDB;
